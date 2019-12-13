@@ -1,0 +1,25 @@
+{% extends 'base.html'%}
+{% block content %}
+
+ <ul class="collapsible">
+    {% for it in items %}
+    <li>
+      <div class="collapsible-header">
+        <div class="col s3">
+            <i class="material-icons">expand_more</i>
+            <a href="{{url_for('delete_task', task_id=task._id)}}"class="waves-effect waves-light btn btn_small">Del</a>
+            <a href="{{url_for('edit_task', task_id=task._id)}}" class="waves-effect waves-light btn btn_small blue">Edit</a>
+        </div>
+        <div class="item_header col s9">
+            <strong>{{it.description}}</strong> - Prepare at: {{it.hydra_temp}}
+        </div>
+      
+      </div>
+      <div class="collapsible-body">
+      <span>{{it.info}}</span>
+      </div>
+    </li>
+    {% endfor %}
+  </ul>
+        
+{% endblock %}
