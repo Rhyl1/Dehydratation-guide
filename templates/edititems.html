@@ -1,0 +1,66 @@
+{% extends 'base.html'%} {% block content %}
+
+<h3>Edit preparation items</h3>
+<div class="row">
+    <form action="{{ url_for('update_item', task_id=task._id) }}" method="POST"  class="col s12">
+        <div class="row">
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="material-icons prefix">poll</i>
+                    <select id="types" name="type_sort">
+                  <option value="" disabled selected>Choose the type of item to be prepared</option>
+                  {% for type in types %}
+                    {% if type.types_sort == items.types_sort%}
+                      <option value="{{type.type_sort}}" selected >{{type.type_sort}}</option>
+                      {% else %}
+                        <option value="{{type.type_sort}}">{{type.type_sort}}</option>
+                    {% endif %}
+                  {% endfor %}
+                </select>
+                    <label>Category of the item to be prepared</label>
+                </div>
+            </div>
+            <div class="input-field col s12">
+                <i class="material-icons prefix">assignment</i>
+                <input id="description" name="description" type="text" class="validatie" value="{{item.description}}">
+                <label for="icon_prefix">Name of preparation</label>
+            </div>
+        </div>
+        <!-- <div class="row">
+            <div class="input-field col s12">
+                <i class="material-icons prefix">subject</i>
+                <textarea name="task_description" id="task_description" class="materialize-textarea">{{task.task_descr}}</textarea>
+                <label for="icon_telephone">Task Description</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="material-icons prefix">today</i>
+                <input id="due_date" name="due_date" type="text" class="datepicker">
+                <label for="icon_prefix">Due Date</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="switch"> -->
+                <label>
+                    {% if task.is_urgent %}
+                    <input id="is_urgent" name="is_urgent" type="checkbox" checked>
+                    {% else %}
+                    <input id="is_urgent" name="is_urgent" type="checkbox">
+                    {% endif %}
+                  <span class="lever"></span>
+                  Is Urgent
+                </label>
+            </div>
+        </div>
+        <div class="row">
+            <button class="btn waves-effect waves-light" type="submit" name="action">Edit Task
+                <i class="material-icons right">playlist_add</i>
+             </button>
+        </div>
+    </form>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+{% endblock %}
