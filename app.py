@@ -33,6 +33,13 @@ def insert_item():
     items.insert_one(request.form.to_dict())
     return redirect(url_for('show_items'))
 
+# @app.route('/edit_item/<item_id>')
+# def edit_item(item_id):
+#     the_item =  mongo.db.items.find_one({"_id": ObjectId(item_id)})
+#     all_types =  mongo.db.types.find()
+#     return render_template('edititem.html', item=the_item,
+#                            types=all_types)
+
 """This sets the IP and Port host settings """
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),
