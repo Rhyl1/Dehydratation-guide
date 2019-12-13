@@ -16,8 +16,8 @@
       <div class="collapsible-body">
       <span>Dry for {{item.hydra_time_min}} to {{item.hydra_time_max}} hours</span><br>
       <span>
-        {% if item.blanching == false %}
-            <span>: Blanching of items required before preperation</span>
+        {% if item.blanching == "on" %}
+            <span> Blanching of items required before preperation</span>
             {% else %}
             <span> No blanching needed before preparation</span>
         {% endif %}
