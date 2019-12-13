@@ -1,0 +1,69 @@
+{% extends 'base.html'%}
+{% block content %}
+
+<h3>Add preparation items</h3>
+<div class="row">
+    <form action="{{ url_for('insert_item') }}" method="POST" class="col s12">
+<div class="row">
+    <div class="input-field col s12">
+    <i class="material-icons prefix">poll</i>
+    <select id="type" name="type_sort">
+      <option value="" disabled selected>Choose a type of preparation</option>
+      {% for type in types%}
+      <option value="{{type.type_sort}}">{{type.type_sort}}</option>
+      {% endfor %}
+    </select>
+    <label>Type of preparation</label>
+  </div>
+</div>
+
+      <div class="row">
+        <div class="input-field col s12">
+          <i class="material-icons prefix">assignment</i>
+          <input id="description" name="description" type="text" class="validate">
+          <label for="icon_prefix">Name of preparation</label>
+        </div>
+    </div>
+        <div class="row">
+            <div class="input-field col s12">
+            <i class="material-icons prefix">subject</i>
+            <textarea id="info" name="info" class="materialize-textarea"></textarea>
+            <label for="icon_telephone">Info</label>
+            </div>
+        </div>
+        <div class="row">
+        <!-- <div id="matfix" class="input-field col s12">
+          <i class="material-icons prefix">today</i>
+          <input id="hydra_temp" name="hydra_temp" type="text" class="datepicker">
+          <label for="icon_prefix">Hydratation temperature</label> -->
+          
+          <label>Blanching needed?</label>
+  <select id="blanching" name="blanching" class="browser-default col s12">
+    <option value="" disabled selected>Choose your option</option>
+    <option value="true">yes</option>
+    <option value="false">no</option>
+  </select>
+        <!-- </div> -->
+    </div>
+    <div class="row">
+        <div class="input-field col s12">
+          <i class="material-icons prefix">assignment</i>
+          <input id="hydra_time_min" name="hydra_time_min" type="text" class="validate">
+          <label for="icon_prefix">Minimal preparaton time</label>
+        </div>
+        <div class="row">
+        <div class="input-field col s12">
+          <i class="material-icons prefix">assignment</i>
+          <input id="hydra_time_max" name="hydra_time_max" type="text" class="validate">
+          <label for="icon_prefix">Maximum preparaton time</label>
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn waves-effect waves-light" type="submit" name="action">Add Preparation
+            <i class="material-icons right">playlist_add</i>
+        </button>
+        </div>
+    </form>
+  </div>
+
+{% endblock %}

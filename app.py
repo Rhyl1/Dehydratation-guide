@@ -15,22 +15,23 @@ app.config["MONGO_DBNAME"] = 'Dehydra'
 app.config["MONGO_URI"] = os.environ.get('MONGO_URI')
 
 mongo = PyMongo(app)
+
 """This creates the app routes and functions """
 @app.route('/')
-@app.route('/get_items')
-def get_items():
-    return render_template("items.html", tasks=mongo.db.items.find())
+@app.route('/show_items')
+def show_items():
+    return render_template("items.html", items=mongo.db.items.find())
 
-# @app.route('/addtask')
-# def add_tasks():
-#     return render_template("addtask.html",
-#     categories=mongo.db.categories.find())
+@app.route('/additems')
+def add_items():
+    return render_template("additems.html",
+    types=mongo.db.types.find())
 
-# @app.route('/insert_task', methods=['POST'])
-# def insert_task():
-#     tasks = mongo.db.tasks
-#     tasks.insert_one(request.form.to_dict())
-#     return redirect(url_for('get_tasks'))
+@app.route('/insert_item', methods=['POST'])
+def insert_item():
+    items = mongo.db.items
+    items.insert_one(request.form.to_dict())
+    return redirect(url_for('show_items'))
 
 """This sets the IP and Port host settings """
 if __name__ == '__main__':
