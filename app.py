@@ -82,6 +82,16 @@ def delete_type(type_id):
     mongo.db.types.remove({'_id': ObjectId(type_id)})
     return redirect(url_for('get_types'))
 
+# @app.route('/addtypes')
+# def add_types():
+#     return render_template("addtypes.html",
+#     types=mongo.db.types.find())
+
+# @app.route('/insert_type', methods=['POST'])
+# def insert_type():
+#     types = mongo.db.types
+#     types.insert_one(request.form.to_dict())
+#     return redirect(url_for('get_types'))
 
 """This sets the IP and Port host settings """
 if __name__ == '__main__':
