@@ -23,3 +23,18 @@ nav .brand-logo {
 nav ul a {
     color: #2196F3;
 }
+
+h4 {
+    text-align: center;
+}
+
+
+.collapsible-header {
+    border-color: #2196F3;
+    border-style: ridge;
+}
+
+.collapsible-body {
+    border-color: #2196F3;
+    border-style: ridge;
+}

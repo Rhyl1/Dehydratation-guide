@@ -49,7 +49,7 @@ def edit_item(item_id):
 def update_item(item_id):
     items = mongo.db.items
     items.update({"_id": ObjectId(item_id)},
-    {  'description' : request.form.get('discription'),
+    {  'description' : request.form.get('description'),
         'type_sort' : request.form.get('type_sort'),
         'info' : request.form.get('info'),
         'hydra_temp' : request.form.get('hydra_temp'),

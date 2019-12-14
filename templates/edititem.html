@@ -6,7 +6,7 @@
         <div class="row">
             <div class="row">
                 <div class="input-field col s12">
-                    <i class="material-icons prefix">poll</i>
+                    <i class="material-icons prefix">restaurant_menu</i>
                     <select id="types" name="type_sort">
                   <option value="" disabled selected>Choose the type of item to be prepared</option>
                   {% for type in types %}
@@ -29,7 +29,7 @@
         <div class="row">
             <div class="input-field col s12">
                 <i class="material-icons prefix">subject</i>
-                <textarea name="info" id="info" class="materialize-textarea">{{item.task_info}}</textarea>
+                <textarea name="info" id="info" class="materialize-textarea">{{item.info}}</textarea>
                 <label for="icon_telephone">Info</label>
             </div>
         </div>

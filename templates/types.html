@@ -3,11 +3,14 @@
 <div class="row">
 
     <h3>Types of Preparations</h3>
+
+    <div class="row">
+        <a href="{{url_for('add_types')}}" class="waves-effect waves-light btn btn_small red">Add</a>
     <ul class="collapsible" data-collapsible="accordion">
         {% for type in types %}
         <li>
             <div class="collapsible-header">
-                <a href="{{url_for('add_types')}}" class="waves-effect waves-light btn btn_small red">Add</a>
+                <!-- <a href="{{url_for('add_types')}}" class="waves-effect waves-light btn btn_small red">Add</a> -->
                 <a href="{{url_for('edit_type', type_id=type._id)}}" class="waves-effect waves-light btn btn_small blue">Edit</a>
                 <a href="{{url_for('delete_type', type_id=type._id)}}" class="waves-effect waves-light btn btn_small">Del</a>
                     
