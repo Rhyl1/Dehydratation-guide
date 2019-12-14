@@ -9,3 +9,17 @@
 .item_header {
     margin-top: 5px;
 }
+
+nav {
+    background-color:transparent;
+    
+}
+
+nav .brand-logo {
+    color: #2196F3;
+    margin-left: 10px;
+}
+
+nav ul a {
+    color: #2196F3;
+}
