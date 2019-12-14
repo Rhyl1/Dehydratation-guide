@@ -33,6 +33,11 @@ def insert_item():
     items.insert_one(request.form.to_dict())
     return redirect(url_for('show_items'))
 
+app.route('/edititems')
+def edit_all_items():
+    return render_template("edit_all_items.html",
+    types=mongo.db.types.find())
+
 @app.route('/edit_item/<item_id>')
 def edit_item(item_id):
     the_item =  mongo.db.items.find_one({"_id": ObjectId(item_id)})

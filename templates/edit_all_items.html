@@ -1,0 +1,33 @@
+{% extends 'base.html'%}
+{% block content %}
+
+ <ul class="collapsible">
+    {% for item in items %}
+    <li>
+      <div class="collapsible-header">
+        <div class="col s3">
+            <i class="material-icons">expand_more</i>
+            <a href="{{url_for('delete_item', item_id=item._id)}}"class="waves-effect waves-light btn btn_small">Del</a>
+            <a href="{{url_for('edit_item', item_id=item._id)}}" class="waves-effect waves-light btn btn_small blue">Edit</a>
+        </div>
+        <div class="item_header col s9">
+            <strong>{{item.description}}</strong> - Prepare at {{item.hydra_temp}} degrees Celsius
+        </div>
+      
+      </div>
+      <div class="collapsible-body">
+      <span>Dry for {{item.hydra_time_min}} to {{item.hydra_time_max}} hours</span><br>
+      <span>
+        {% if item.blanching == "on" %}
+            <span> Blanching of items required before preperation</span>
+            {% else %}
+            <span> No blanching needed before preparation</span>
+        {% endif %}
+      </span><br>
+      <span>{{item.info}}</span>
+      </div>
+    </li>
+    {% endfor %}
+  </ul>
+        
+{% endblock %}
