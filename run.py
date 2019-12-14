@@ -33,17 +33,17 @@ def insert_item():
     items.insert_one(request.form.to_dict())
     return redirect(url_for('show_items'))
 
-app.route('/edititems')
-def edit_all_items():
+@app.route('/edit_items')
+def edit_preparations():
     return render_template("edit_all_items.html",
-    types=mongo.db.types.find())
+    items=mongo.db.items.find())
 
 @app.route('/edit_item/<item_id>')
 def edit_item(item_id):
-    the_item =  mongo.db.items.find_one({"_id": ObjectId(item_id)})
-    all_types =  mongo.db.types.find()
+    the_item = mongo.db.items.find_one({"_id": ObjectId(item_id)})
+    all_items = mongo.db.items.find()
     return render_template('edititem.html', item=the_item,
-                           types=all_types)
+                           items=all_items)
 
 @app.route('/update_item/<item_id>', methods=['POST'])
 def update_item(item_id):
@@ -62,7 +62,7 @@ def update_item(item_id):
 @app.route('/delete_item/<item_id>')
 def delete_item(item_id):
     mongo.db.items.remove({'_id': ObjectId(item_id)})
-    return redirect(url_for('show_items'))
+    return redirect(url_for('edit_preparations'))
 
 @app.route('/get_types')
 def get_types():
