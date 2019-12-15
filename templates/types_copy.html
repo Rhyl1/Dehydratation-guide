@@ -1,0 +1,38 @@
+{% extends 'base.html'%} {% block content %}
+
+<div class="row">
+
+    <h3>Types of Preparations</h3>
+
+    <div class="row">
+        <a href="{{url_for('add_types')}}" class="waves-effect waves-light btn btn_small red">Add</a>
+    <ul class="collection">
+        {% for type in types %}
+        <li class="collection-item avatar">
+            <div class="collapsible-header">
+                <a href="{{url_for('edit_type', type_id=type._id)}}" class="waves-effect waves-light btn btn_small blue">Edit</a>
+                <a href="{{url_for('delete_type', type_id=type._id)}}" class="waves-effect waves-light btn btn_small">Del</a>
+                    
+                <div class="task_header">
+            {% if type.type_sort == "Vegetable" %}
+        <img src="{{url_for('static', filename='img/veg.png')}}" alt="" class="circle">
+      {% elif type.type_sort == "Fruit" %}
+        <img src="{{url_for('static', filename='img/fruit.jpg')}}" alt="" class="circle">
+        {% elif type.type_sort == "Fish" %}
+        <img src="{{url_for('static', filename='img/fish.png')}}" alt="" class="circle">
+        {% elif type.type_sort == "Herbs" %}
+        <img src="{{url_for('static', filename='img/herbs.png')}}" alt="" class="circle">
+        {% elif type.type_sort == "Meat" %}
+        <img src="{{url_for('static', filename='img/meat.png')}}" alt="" class="circle">
+      {% else %}
+        <img src="{{url_for('static', filename='img/food.jpg')}}" alt="" class="circle">
+        {% endif %}
+                    <strong>{{type.type_sort}}</strong>
+                </div>
+            </div>
+        </li>
+        {% endfor %}
+
+    </ul>
+</div>
+{% endblock %}

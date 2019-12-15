@@ -1,3 +1,4 @@
+/* General styling */
 .btn_small {
     height: 24px;
     width: 60px;
@@ -29,16 +30,28 @@ h4 {
 }
 
 
-.collapsible-header {
-    border-color: #2196F3;
-    border-style: solid;
-}
-
-.collapsible-body {
-    border-color: #2196F3;
-    border-style: ridge;
-}
-
 nav .button-collapse i {
     color: #2196F3;
+}
+/* --MediaQueries--- */
+
+@media (max-width: 550px) {
+    nav .brand-logo {
+        margin-top: 0;
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 300px) {
+    nav .brand-logo {
+        margin-top: 0;
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 250px) {
+    nav .brand-logo {
+        margin-top: 0;
+        font-size: 0.5rem;
+    }
 }

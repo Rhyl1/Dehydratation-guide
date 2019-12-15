@@ -20,7 +20,7 @@ mongo = PyMongo(app)
 @app.route('/')
 @app.route('/show_items')
 def show_items():
-    return render_template("items.html", items=mongo.db.items.find())
+    return render_template("items2.html", items=mongo.db.items.find())
 
 @app.route('/additems')
 def add_items():
@@ -35,7 +35,7 @@ def insert_item():
 
 @app.route('/edit_items')
 def edit_preparations():
-    return render_template("edit_all_items.html",
+    return render_template("edit_all_items_copy.html",
     items=mongo.db.items.find())
 
 @app.route('/edit_item/<item_id>')
@@ -66,7 +66,7 @@ def delete_item(item_id):
 
 @app.route('/get_types')
 def get_types():
-    return render_template('types.html',
+    return render_template('types_copy.html',
                            types=mongo.db.types.find())
 
 @app.route('/edit_type/<type_id>')
