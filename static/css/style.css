@@ -37,6 +37,11 @@ nav .button-collapse i {
 #ad_button {
     text-align: center;
 }
+
+.side_nfo {
+    font-size: 0.6rem;
+    text-align: center;
+}
 /* --MediaQueries--- */
 
 @media (max-width: 550px) {

@@ -1,6 +1,15 @@
 {% extends 'base.html'%}
 {% block content %}
 
+<div class="row col s12">
+    <p class="side_nfo">
+        <h5>Welcome fellow food hydrators</h5>
+        Use this refernce guide to make optimal use of your food hydrator.<br>
+        You can add to the guide information by adding your own preparation items. <br>
+        This tool is under construction, so stay tuned for furture improvements to 
+        be implemented, <br> such as a filter function and easy searching functions, that will surely be needed, as the list of items will keep growing.
+    </p>
+
 <ul class="collection">
  {% for item in items %}
     <li class="collection-item avatar">
@@ -34,5 +43,5 @@
     </li>
     {% endfor %}
   </ul>
-
+</div>
   {% endblock %}
