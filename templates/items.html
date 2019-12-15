@@ -9,19 +9,17 @@
             <i class="material-icons">expand_more</i>
         </div>
         <div class="item_header col s9">
-            <strong>{{item.description}}</strong> - Prepare at {{item.hydra_temp}} &#8451
-        </div>
-      
-      </div>
-      <div class="collapsible-body">
-      <span>Dry for {{item.hydra_time_min}} to {{item.hydra_time_max}} hours</span><br>
-      <span>
-        {% if item.blanching == "on" %}
+            <strong>{{item.description}}</strong> - Prepare at <strong>{{item.hydra_temp}} </strong>&#8451 | Dry for <strong>{{item.hydra_time_min}}</strong> to <strong>{{item.hydra_time_max}}</strong> hours | 
+            <span>
+            {% if item.blanching == "on" %}
             <span> Blanching of items required before preperation</span>
             {% else %}
             <span> No blanching needed before preparation</span>
-        {% endif %}
-      </span><br>
+            {% endif %}
+            </span>
+            </div>
+      </div>
+      <div class="collapsible-body">
       <span>{{item.info}}</span>
       </div>
     </li>
