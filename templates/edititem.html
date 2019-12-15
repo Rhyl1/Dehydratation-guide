@@ -10,7 +10,7 @@
                     <select id="types" name="type_sort">
                   <option value="" disabled selected>Choose the type of item to be prepared</option>
                   {% for type in types %}
-                    {% if type.types_sort == items.types_sort%}
+                    {% if type.type_sort == item.type_sort %}
                       <option value="{{type.type_sort}}" selected >{{type.type_sort}}</option>
                       {% else %}
                         <option value="{{type.type_sort}}">{{type.type_sort}}</option>

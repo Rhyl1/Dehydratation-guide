@@ -31,10 +31,14 @@ h4 {
 
 .collapsible-header {
     border-color: #2196F3;
-    border-style: ridge;
+    border-style: solid;
 }
 
 .collapsible-body {
     border-color: #2196F3;
     border-style: ridge;
+}
+
+nav .button-collapse i {
+    color: #2196F3;
 }

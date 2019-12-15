@@ -41,16 +41,16 @@ def edit_preparations():
 @app.route('/edit_item/<item_id>')
 def edit_item(item_id):
     the_item = mongo.db.items.find_one({"_id": ObjectId(item_id)})
-    all_items = mongo.db.items.find()
+    all_types = mongo.db.types.find()
     return render_template('edititem.html', item=the_item,
-                           items=all_items)
+                           types=all_types)
 
 @app.route('/update_item/<item_id>', methods=['POST'])
 def update_item(item_id):
     items = mongo.db.items
     items.update({"_id": ObjectId(item_id)},
-    {  'description' : request.form.get('description'),
-        'type_sort' : request.form.get('type_sort'),
+    {   'type_sort' : request.form.get('type_sort'),
+        'description' : request.form.get('description'),
         'info' : request.form.get('info'),
         'hydra_temp' : request.form.get('hydra_temp'),
         'hydra_time_min' : request.form.get('hydra_time_min'),
