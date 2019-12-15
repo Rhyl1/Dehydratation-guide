@@ -27,11 +27,15 @@ nav ul a {
 
 h4 {
     text-align: center;
+    color: #2196F3;
 }
-
 
 nav .button-collapse i {
     color: #2196F3;
+}
+
+#ad_button {
+    text-align: center;
 }
 /* --MediaQueries--- */
 
