@@ -7,7 +7,8 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
     <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}" type="text/css"/>
-    <title>Document</title>
+    <title>Dehydratation Guide</title>
+    <link rel="shortcut icon" href="{{url_for('static', filename='img/dry_time.png')}}" type="image/x-icon">
 </head>
 <body>
 <header>
@@ -17,7 +18,7 @@
                 <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
                 <ul id="nav-mobile" class="right hide-on-med-and-down">
                     <li><a href="{{url_for('show_items')}}">Home</a></li>
-                    <li><a href="{{url_for('add_items')}}">New Preparation</a></li>
+                    <li><a href="{{url_for('add_items')}}">Add Preparation</a></li>
                     <li><a href="{{url_for('edit_preparations')}}">Manage Preparation Item list</a></li>
                     <li><a href="{{url_for('get_types')}}">Manage types of Preparation</a></li>
                 </ul>
