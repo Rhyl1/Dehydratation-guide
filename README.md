@@ -11,20 +11,21 @@ The website is constructed with a minimal responsive grid and contains a basic n
 (https://github.com/Rhyl1/
 
 #### Users
-The users of the website include people looking for information about drying food in food hydrators and owners of home food hydrators looking for reference material.
+The users of the website include people looking for information about drying food in food dehydrators 
+and owners of home food dehydrators looking for reference material and a way to combine foods with the same dry time for drying together.
 
 
 #### Features
 ##### Existing Features
-- Start button -- This button starts the game
-- About button -- This button links to an info screen, explaining the game
-- Score counter -- Appears after the game starts and shows the current score
-- Random generated letter bubbles -- These are the main feature of the game and need to be matched by typing the corresponding key for them to disappear from the screen and gain points.
+- Navigation bar -- This bar is responsive and changes for smaller resolutions.
+- Editable list of items with icon, corresponding to the chosen category.
 
 ##### Features Left to Implement
-- Filter function: to filter the list so it shows for instance only vegetables, or only a certain kind of temp. to prepare food. 
-- Favourites functionality; items out of the list could be marked as favourite.
+- Flask Pagination - to deal with a larger list- 
+- Possibility to create a list of favorites (by clicking on the start in the right-hand corner of the list item)
+- Filter function: to filter the list so it shows for instance only vegetables or only a certain kind of temp. to prepare food. 
 - Logging of the users so they can edit and store their favorite lists.
+
 
 
 ##### Technologies Used
@@ -34,34 +35,36 @@ This project uses:
 - CSS - for styling
 - Flask
 - Jinja for template logic
-- Pyton for logical programming
+- Python for logical programming
 - Materialize CDN for styling and icons
-- MongoDB Atlas for database
-- Heroku for site deployment
--flask_pymongo for ?
--ndspython for ?
+- MongoDB Atlas for a cloud-based database service
 - Google Chrome - for browser use and the use of development tools
 - The Google search engine - was used for research.
-- Links to Bootstrap CDN - for the Bootstrap and JavaScript functions
 - Links to JQuery and JS scripts
-- GitHub - repository hosted on Github -Gotpod: was used as cloud IDE solution
-- Git Pages - Website is hosted on Github pages
+- GitHub - repository hosted on Github 
+- GItpod: was used as a cloud IDE solution
+- Heroku for site deployment & hosting
 - Am I responsive - was used for testing responsiveness of the website
-- https://validator.w3.org - was used to validate the css and html code used
+- https://validator.w3.org - was used to validate the CSS and HTML code used
+
 ##Testing
 While constructing the website, the initial responsiveness was tested within the Gitpod IDE, which links to the Google Chrome browser, where development tools were used.
 After this, Am I responsive was used to test responsiveness.
-Also the html and css code was validated using; https://validator.w3.org. 
+Also, the HTML and CSS code was validated using; https://validator.w3.org. 
 
 ## Deployment
-The settings for the mongo DB are set in the env.py file. It contains a string with the username and password and a reference to the database name, used for the apps construction. This file is 
-not uploaded to github, to keep the information secure after deployment. After finishing the pages in Gitpod, the project was deployed using Heroku. 
+The settings for the mongo DB are set in the env.py file. It contains a string with the username and password and a reference to the database name, used for the construction of the app. This file is not uploaded to GitHub, to keep the information secure after deployment. After finishing the pages in Gitpod, the project was deployed using Heroku. 
 To make this deployment possible the following steps need to be followed:
+- The Heroku account needs to be linked to the GitHub repository.
+- The following 2 files need to be present in the Root structure before deployment action: 
+1)requirements.txt (containing dependencies)
+2)Procfile
+- The Config Vars under settings need to be set with the following keys:
+ IP (in this case 0.0.0.0)
+ PORT (in this case 8080)
+ MONGO_URI (the key needed to access the MongoDB Atlas service)
+-- If the right files are present and the Config Vars are set the master branch can be successfully deployed.
 
-The pages where deployed by activating the GitHub pages on GitHub. This process makes the website accessible for user via the internet
 ## Credits for Content & Acknowledgements
-- All props go to the course material and in perticular the miniproject at the end of the ....module.
+- All props go to the course material and in particular the mini-project at the end of the Data-Centric Development module.
 
-
-- CSS3 Patterns Gallery is used for background CSS styling:
-https://leaverou.github.io/css3patterns/#cross-dots

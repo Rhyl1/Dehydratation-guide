@@ -1,5 +1,5 @@
 {% extends 'base.html'%} {% block content %}
-
+<!----------------------------------This page is created to edit items from the list---------------------------------->
 <h3>Edit preparation items</h3>
 <div class="row">
     <form action="{{ url_for('update_item', item_id=item._id) }}" method="POST"  class="col s12">
@@ -11,9 +11,9 @@
                   <option value="" disabled selected>Choose the type of item to be prepared</option>
                   {% for type in types %}
                     {% if type.type_sort == item.type_sort %}
-                      <option value="{{type.type_sort}}" selected >{{type.type_sort}}</option>
+                    <option value="{{type.type_sort}}" selected >{{type.type_sort}}</option>
                       {% else %}
-                        <option value="{{type.type_sort}}">{{type.type_sort}}</option>
+                    <option value="{{type.type_sort}}">{{type.type_sort}}</option>
                     {% endif %}
                   {% endfor %}
                 </select>

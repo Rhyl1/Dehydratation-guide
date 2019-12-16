@@ -22,15 +22,15 @@
 
       <span class="title"><strong>{{item.description}}</strong></span>
       <p>Prepare at <strong>{{item.hydra_temp}} </strong>&#8451 | Dry for <strong>{{item.hydra_time_min}}</strong> to <strong>{{item.hydra_time_max}}</strong> hours | 
-<br>
+        <br>
          <span>
-            {% if item.blanching == "on" %}
-            <span> Blanching of items required before preperation</span>
-            {% else %}
-            <span> No blanching needed before preparation</span>
-            {% endif %}
-            </span><br>
-            <span>{{item.info}}</span>
+        {% if item.blanching == "on" %}
+        <span> Blanching of items required before preperation</span>
+        {% else %}
+        <span> No blanching needed before preparation</span>
+        {% endif %}
+        </span><br>
+        <span>{{item.info}}</span>
       </p>
       <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
     </li>
