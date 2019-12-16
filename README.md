@@ -1,4 +1,4 @@
-## The Dehydratation guide. 
+## Food Dehydration Guide
 This site was put together for the Code Institue milestone project nr. 3.
 It offers a reference for times and temperatures to dry food in food dehydrators.
 
