@@ -4,12 +4,15 @@ It offers a reference for times and temperatures to dry food in food dehydrators
 
 ### UX
 The website is constructed with a minimal responsive grid and contains a basic navbar for navigation.
-<![alt](https://github.com/Rhyl1/projectII_game/blob/4b7e8865d7b586ac6ac11cce08ac2036256cbf0b/img/startscrn.png)>
+<![alt](https://github.com/Rhyl1/Dehydratation-guide/blob/b466707ce6edfa175eccd7d1135412a3c626c932/static/img/responsive1.png)>
+<![alt](https://github.com/Rhyl1/Dehydratation-guide/blob/b466707ce6edfa175eccd7d1135412a3c626c932/static/img/responsive2.png)>
+
 - See following link for wireframes (included in the root structure img folder): 
-(https://github.com/Rhyl1/projectII_game/blob/a336cc4f5f47e2d04dbcb2eeea74ff36ec1dabff/img/Wireframe_typegame.pdf)
+(https://github.com/Rhyl1/
 
 #### Users
-The users of the website include people looking for information about drying food in food hydrators.
+The users of the website include people looking for information about drying food in food hydrators and owners of home food hydrators looking for reference material.
+
 
 #### Features
 ##### Existing Features
