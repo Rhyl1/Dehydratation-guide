@@ -7,8 +7,6 @@ The website is constructed with a minimal responsive grid and contains a basic n
 <![alt](https://github.com/Rhyl1/Dehydratation-guide/blob/5b92296606871c15af749687e66ca4aaf295ad30/static/img/responsive1.png)>
 
 <![alt](https://github.com/Rhyl1/Dehydratation-guide/blob/5b92296606871c15af749687e66ca4aaf295ad30/static/img/responsive2.png)>
-- See following link for wireframes (included in the root structure img folder): 
-(https://github.com/Rhyl1/
 
 #### Users
 The users of the website include people looking for information about drying food in food dehydrators 
@@ -66,5 +64,5 @@ To make this deployment possible the following steps need to be followed:
 -- If the right files are present and the Config Vars are set the master branch can be successfully deployed.
 
 ## Credits for Content & Acknowledgements
-- All props go to the course material and in particular the mini-project at the end of the Data-Centric Development module.
+- All inspirational credit go to the course material and in particular the mini-project at the end of the Data-Centric Development module.
 
