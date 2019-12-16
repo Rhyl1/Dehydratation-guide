@@ -19,12 +19,12 @@ and owners of home food dehydrators looking for reference material and a way to 
 - Editable list of items with icon, corresponding to the chosen category.
 
 ##### Features Left to Implement
-- Flask Pagination - to deal with a larger list- 
+- Flask Pagination - to deal with a larger list
+- Validation of input on fields and return messages for users
+- Disabeling of duplicate records in types list
 - Possibility to create a list of favorites (by clicking on the start in the right-hand corner of the list item)
 - Filter function: to filter the list so it shows for instance only vegetables or only a certain kind of temp. to prepare food. 
 - Logging of the users so they can edit and store their favorite lists.
-
-
 
 ##### Technologies Used
 This project uses:
