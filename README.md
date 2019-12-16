@@ -5,8 +5,8 @@ It offers a reference for times and temperatures to dry food in food dehydrators
 ### UX
 The website is constructed with a minimal responsive grid and contains a basic navbar for navigation.
 <![alt](https://github.com/Rhyl1/Dehydratation-guide/blob/b466707ce6edfa175eccd7d1135412a3c626c932/static/img/responsive1.png)>
-<![alt](https://github.com/Rhyl1/Dehydratation-guide/blob/b466707ce6edfa175eccd7d1135412a3c626c932/static/img/responsive2.png)>
 
+<![alt](https://github.com/Rhyl1/Dehydratation-guide/blob/b466707ce6edfa175eccd7d1135412a3c626c932/static/img/responsive2.png)>
 - See following link for wireframes (included in the root structure img folder): 
 (https://github.com/Rhyl1/
 
