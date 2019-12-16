@@ -3,11 +3,7 @@ This site was put together for the Code Institue milestone project nr. 3.
 It offers a reference for times and temperatures to dry food in food dehydrators.
 
 ### UX
-The game is made to be played in full-screen mode.
-Start the game by clicking the <START> button in the screen.
-After this random letters will appear; the user can score 20 points for each matched letter.
-To stop the game the user can press the <ESC> button. After stopping the game the START menu will re-appear. 
-The About button in the start menu links to an ABOUT info screen, explaining the working of the game.
+The website is constructed with a minimal responsive grid and contains a basic navbar for navigation.
 <![alt](https://github.com/Rhyl1/projectII_game/blob/4b7e8865d7b586ac6ac11cce08ac2036256cbf0b/img/startscrn.png)>
 - See following link for wireframes (included in the root structure img folder): 
 (https://github.com/Rhyl1/projectII_game/blob/a336cc4f5f47e2d04dbcb2eeea74ff36ec1dabff/img/Wireframe_typegame.pdf)
@@ -23,10 +19,10 @@ The users of the website include people looking for information about drying foo
 - Random generated letter bubbles -- These are the main feature of the game and need to be matched by typing the corresponding key for them to disappear from the screen and gain points.
 
 ##### Features Left to Implement
-- Logging of the user name.
-- Logging of the user scores.
-- Access to a high score list via the start menu.
-- A level up function for increased difficulty.
+- Filter function: to filter the list so it shows for instance only vegetables, or only a certain kind of temp. to prepare food. 
+- Favourites functionality; items out of the list could be marked as favourite.
+- Logging of the users so they can edit and store their favorite lists.
+
 
 ##### Technologies Used
 This project uses:
@@ -55,15 +51,14 @@ After this, Am I responsive was used to test responsiveness.
 Also the html and css code was validated using; https://validator.w3.org. 
 
 ## Deployment
-The settings for the mongo DB are set in the app.py file. It contains a string with the username and password and a reference to the database name, used for the apps construction. This file is 
-not uploaded to github, to keep the information secure after deployment.
+The settings for the mongo DB are set in the env.py file. It contains a string with the username and password and a reference to the database name, used for the apps construction. This file is 
+not uploaded to github, to keep the information secure after deployment. After finishing the pages in Gitpod, the project was deployed using Heroku. 
+To make this deployment possible the following steps need to be followed:
 
 The pages where deployed by activating the GitHub pages on GitHub. This process makes the website accessible for user via the internet
 ## Credits for Content & Acknowledgements
-- All props go to Riva Tamada who got me started on this game, via his free tutorial (https://www.9lessons.info/2010/12/typing-game-with-jquery.html)
+- All props go to the course material and in perticular the miniproject at the end of the ....module.
 
-- Also Anathol for his inspiring game turoials.
 
 - CSS3 Patterns Gallery is used for background CSS styling:
 https://leaverou.github.io/css3patterns/#cross-dots
-pattern startpage & game is Upholstry by Nate Eagle.
