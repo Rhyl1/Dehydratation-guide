@@ -66,7 +66,7 @@ def delete_item(item_id):
 
 @app.route('/get_types')
 def get_types():
-    return render_template('types_copy.html',
+    return render_template('types.html',
                            types=mongo.db.types.find())
 
 @app.route('/edit_type/<type_id>')
