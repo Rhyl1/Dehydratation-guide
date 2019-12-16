@@ -1,72 +1,69 @@
 {% extends 'base.html'%}
 {% block content %}
-
+<!----------------------------------This page is created to add items to the list---------------------------------->
 <h4>Add an items to the list</h4>
 <div class="row">
     <form action="{{ url_for('insert_item') }}" method="POST" class="col s12">
-<div class="row">
-    <div class="input-field col s12">
-    <i class="material-icons prefix">looks_one</i>
-    <select id="type" name="type_sort">
-      <option value="" disabled selected>Choose a type of preparation</option>
-      {% for type in types%}
-      <option value="{{type.type_sort}}">{{type.type_sort}}</option>
-      {% endfor %}
-    </select>
-    <label>Type of preparation</label>
-  </div>
-</div>
-
-      <div class="row">
-        <div class="input-field col s12">
-          <i class="material-icons prefix">looks_two</i>
-          <input id="description" name="description" type="text" class="validate">
-          <label for="icon_prefix">Name of preparation</label>
-        </div>
-    </div>
         <div class="row">
             <div class="input-field col s12">
-            <i class="material-icons prefix">looks_3</i>
-            <textarea id="info" name="info" class="materialize-textarea"></textarea>
-            <label for="icon_telephone">Info</label>
+                <i class="material-icons prefix">looks_one</i>
+                <select id="type" name="type_sort">
+                    <option value="" disabled selected>Choose a type of preparation</option>
+                {% for type in types%}
+                    <option value="{{type.type_sort}}">{{type.type_sort}}</option>
+            {% endfor %}
+                </select>
+                <label>Type of preparation</label>
             </div>
         </div>
         <div class="row">
-        <div id="matfix" class="input-field col s12">
-          <i class="material-icons prefix">looks_4</i>
-          <input id="hydra_temp" name="hydra_temp" type="text">
-          <label for="icon_prefix">Hydratation temperature</label>
+            <div class="input-field col s12">
+                <i class="material-icons prefix">looks_two</i>
+                <input id="description" name="description" type="text" class="validate">
+                <label for="icon_prefix">Name of preparation</label>
+            </div>
         </div>
-        <!--  -->
-    </div>
-    <div class="row">
-        <div class="input-field col s6">
-          <i class="material-icons prefix">looks_5</i>
-          <input id="hydra_time_min" name="hydra_time_min" type="text" class="validate">
-          <label for="icon_prefix">Min. preparaton time</label>
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="material-icons prefix">looks_3</i>
+                <textarea id="info" name="info" class="materialize-textarea"></textarea>
+                <label for="icon_telephone">Info</label>
+            </div>
         </div>
-
-        <div class="input-field col s6">
-          <i class="material-icons prefix">looks_6</i>
-          <input id="hydra_time_max" name="hydra_time_max" type="text" class="validate">
-          <label for="icon_prefix">Max. preparaton time</label>
+        <div class="row">
+            <div id="matfix" class="input-field col s12">
+                <i class="material-icons prefix">looks_4</i>
+                <input id="hydra_temp" name="hydra_temp" type="text">
+                <label for="icon_prefix">Hydratation temperature</label>
+            </div>
         </div>
-      </div>
-      <div class="row">
+        <div class="row">
+            <div class="input-field col s6">
+                <i class="material-icons prefix">looks_5</i>
+                <input id="hydra_time_min" name="hydra_time_min" type="text" class="validate">
+                <label for="icon_prefix">Min. preparaton time</label>
+            </div>
+            <div class="input-field col s6">
+                <i class="material-icons prefix">looks_6</i>
+                <input id="hydra_time_max" name="hydra_time_max" type="text" class="validate">
+                <label for="icon_prefix">Max. preparaton time</label>
+            </div>
+        </div>
+        <div class="row">
             <div class="switch">
                 <label>
-                <input id="blanching" name="blanching" type="checkbox">
-                <span class="lever"></span>
+                    <input id="blanching" name="blanching" type="checkbox">
+                    <span class="lever"></span>
                 Blanching needed?
                 </label>
             </div>
-      </div>
-      <div class="row">
-        <button class="btn waves-effect waves-light" type="submit" name="action">Add Preparation
-            <i class="material-icons right">playlist_add</i>
-        </button>
+        </div>
+        <div class="row">
+            <button class="btn waves-effect waves-light" type="submit" name="action">Add Preparation
+                <i class="material-icons right">playlist_add</i>
+            </button>
         </div>
     </form>
-  </div>
+</div>
 
 {% endblock %}

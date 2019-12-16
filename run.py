@@ -1,5 +1,5 @@
 import os
-from flask import Flask, render_template, redirect, request, url_for, flash
+from flask import Flask, render_template, redirect, request, url_for
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
 
@@ -35,7 +35,7 @@ def insert_item():
 
 @app.route('/edit_items')
 def edit_preparations():
-    return render_template("edit_all_items_copy.html",
+    return render_template("edit_all_items.html",
     items=mongo.db.items.find())
 
 @app.route('/edit_item/<item_id>')
