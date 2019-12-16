@@ -20,7 +20,7 @@ mongo = PyMongo(app)
 @app.route('/')
 @app.route('/show_items')
 def show_items():
-    return render_template("items2.html", items=mongo.db.items.find())
+    return render_template("items.html", items=mongo.db.items.find())
 
 @app.route('/additems')
 def add_items():
